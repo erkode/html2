@@ -2,30 +2,6 @@
 
 A simple wrapper around Lexbor for HTML parsing and CSS selector queries.
 
-## API
-
-### `Document`
-- `Document.parse(input string) !Document`
-- `Document.select(sel Selector) []Element`
-- `Document.matches(el Element, sel Selector) bool`
-- `(mut doc Document).free()`
-
-### `Selector`
-- `Selector.parse(selector string) !Selector`
-- `(mut selector Selector).free()`
-
-### `Element`
-- `(el Element).outer_html() !string`
-- `(el Element).inner_html() !string`
-- `(el Element).get_attributes() map[string]string`
-- `(el Element).has_attribute(name string) bool`
-- `(el Element).has_attribute_value(name string, value string) bool`
-- `(el Element).parent() ?Element`
-- `(el Element).first_child() ?Element`
-- `(el Element).last_child() ?Element`
-- `(el Element).next_sibling() ?Element`
-- `(el Element).previous_sibling() ?Element`
-
 ## Quick Example
 
 ```v
@@ -81,3 +57,27 @@ fn main() {
 	}
 }
 ```
+
+## API
+
+### `Document`
+- `Document.parse(input string) !Document`
+- `Document.select(sel Selector) []Element`
+- `Document.matches(el Element, sel Selector) bool`
+- `(mut doc Document).free()`
+
+### `Selector`
+- `Selector.parse(selector string) !Selector`
+- `(mut selector Selector).free()`
+
+### `Element`
+- `(el Element).outer_html() !string`
+- `(el Element).inner_html() !string`
+- `(el Element).get_attributes() map[string]string`
+- `(el Element).has_attribute(name string) bool`
+- `(el Element).has_attribute_value(name string, value string) bool`
+- `(el Element).parent() ?Element`
+- `(el Element).first_child() ?Element`
+- `(el Element).last_child() ?Element`
+- `(el Element).next_sibling() ?Element`
+- `(el Element).previous_sibling() ?Element`
