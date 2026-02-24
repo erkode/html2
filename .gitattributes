@@ -6,3 +6,5 @@
 *.vsh linguist-language=V
 v.mod linguist-language=V
 .vdocignore linguist-language=ignore
+
+*.h linguist-vendored=true
